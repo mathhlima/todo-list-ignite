@@ -10,8 +10,8 @@ export function Task() {
                     placeholder="Adicione uma nova tarefa"
                 />
                 <button className={styles.button}>
-                    Criar
-                    <PlusCircle />
+                    <strong>Criar</strong>
+                    <PlusCircle size={20} />
                 </button>
             </form>
 
