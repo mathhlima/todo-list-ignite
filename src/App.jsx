@@ -1,12 +1,17 @@
-import './App.css'
+import './App.module.css'
+import { Header } from './components/Header'
+import { Task } from './components/Task'
 
 function App() {
   
 
   return (
-    <div className="App">
-      <h1>olá!</h1>
-    </div>
+    
+      <div>
+        <Header />
+        <Task />
+      </div>
+    
   )
 }
 
