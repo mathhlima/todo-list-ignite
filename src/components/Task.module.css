@@ -1,4 +1,17 @@
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.task form{
+    width: 50%;
+    
+}
+
 .task textarea {
     resize: none;
     width: 100%;
+    background: #262626;
 }
+

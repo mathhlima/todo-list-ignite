@@ -1,4 +1,5 @@
 import styles from './Task.module.css'
+import { PlusCircle } from 'phosphor-react'
 
 export function Task() {
     return (
@@ -10,6 +11,7 @@ export function Task() {
                 />
                 <button className={styles.button}>
                     Criar
+                    <PlusCircle />
                 </button>
             </form>
 
