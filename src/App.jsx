@@ -1,4 +1,5 @@
-import './App.module.css'
+import  styles from './App.module.css'
+import { CreatedTasks } from './components/CreatedTasks'
 import { Header } from './components/Header'
 import { Task } from './components/Task'
 
@@ -7,9 +8,10 @@ function App() {
 
   return (
     
-      <div>
+      <div className={styles.wrapper}>
         <Header />
         <Task />
+        <CreatedTasks />
       </div>
     
   )
