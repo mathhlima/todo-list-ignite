@@ -4,7 +4,7 @@ import { Trash } from 'phosphor-react'
 export function Content({task, onDeleteTask}) {
     
     function handleDeleteTask() {
-        onDeleteTask();
+        onDeleteTask(task);
         console.log(event.target.value, 'delete task')
     }
 
