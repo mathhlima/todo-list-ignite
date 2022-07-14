@@ -12,7 +12,6 @@ export function Task() {
     const [newTask, setNewTask] = useState('');
 
 
-
     function handleCreateNewTask() {
         event.preventDefault();
         setTasks([...tasks, newTask])
@@ -26,6 +25,7 @@ export function Task() {
     }
 
     function deleteTask(taskToDelete) {
+        console.log(taskToDelete, 'task to delete')
         const tasksWithoutDeletedOne = tasks.filter(task => {
             return task !== taskToDelete
         })
@@ -43,6 +43,7 @@ export function Task() {
                         name="task"
                         placeholder="Adicione uma nova tarefa"
                         onChange={handleNewTaskChange}
+                        value={newTask}
                     />
                     <button type="submit" disabled={newTask.length === 0} className={styles.button}>
                         <strong>Criar</strong>
@@ -55,8 +56,8 @@ export function Task() {
 
             <div className={styles.createdTask}>
                 <div className={styles.summary}>
-                    <strong className={styles.created}>Tarefas criadas 0 </strong>
-                    <strong className={styles.finished}>Concluídas 0 </strong>
+                    <strong className={styles.created}>Tarefas criadas 0</strong>
+                    <strong className={styles.finished}>Concluídas 0</strong>
                 </div>
 
                 <div className={styles.content}>

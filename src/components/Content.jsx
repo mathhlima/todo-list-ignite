@@ -5,13 +5,14 @@ export function Content({task, onDeleteTask}) {
     
     function handleDeleteTask() {
         onDeleteTask();
+        console.log(event.target.valu, 'delete task')
     }
 
     return (
         <div className={styles.content}>
             <p>{task}</p>
             
-            <button onClick={handleDeleteTask}>
+            <button onClick={handleDeleteTask} title="Deletar task">
                 <Trash size={25} />
             </button>
             
