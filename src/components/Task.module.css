@@ -36,15 +36,7 @@
     
 }
 
-.createdTask .content {
-    background: #333333;
-    display: flex;
-    justify-content: space-between;
-    height: 72px;
-    border-radius: 8px;
-    gap: 1rem;
-    margin-top: 1.5rem;
-}
+
 
 .createdTask .summary .created {
     color: #4EA8DE;

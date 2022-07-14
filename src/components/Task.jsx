@@ -2,11 +2,11 @@ import { useState } from 'react';
 import styles from './Task.module.css'
 import { PlusCircle } from 'phosphor-react'
 import { Trash } from 'phosphor-react'
+import {Content} from '../components/Content';
 
 export function Task() {
 
     const [tasks, setTasks] = useState([
-        'teste'
     ])
 
     const [newTask, setNewTask] = useState('');
@@ -15,12 +15,22 @@ export function Task() {
 
     function handleCreateNewTask() {
         event.preventDefault();
-        //console.log(event.target.value)
+        setTasks([...tasks, newTask])
+        setNewTask('');
     }
 
     function handleNewTaskChange() {
+        event.target.setCustomValidity('')
         setNewTask(event.target.value)
 
+    }
+
+    function deleteTask(taskToDelete) {
+        const tasksWithoutDeletedOne = tasks.filter(task => {
+            return task !== taskToDelete
+        })
+
+        setNewTask(tasksWithoutDeletedOne);
     }
 
     return (
@@ -34,7 +44,7 @@ export function Task() {
                         placeholder="Adicione uma nova tarefa"
                         onChange={handleNewTaskChange}
                     />
-                    <button className={styles.button}>
+                    <button type="submit" disabled={newTask.length === 0} className={styles.button}>
                         <strong>Criar</strong>
                         <PlusCircle size={20} />
                     </button>
@@ -52,8 +62,10 @@ export function Task() {
                 <div className={styles.content}>
 
 
-                    {tasks}
-                    <Trash />
+                    {tasks.map(task => {
+                        return <Content key={task} task={task} onDeleteTask={deleteTask}/>
+                    })}
+                    
                 </div>
 
 

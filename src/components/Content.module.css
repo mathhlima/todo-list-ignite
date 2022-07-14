@@ -1,0 +1,13 @@
+.content {
+    background: #333333;
+    display: flex;
+    justify-content: space-between;
+    height: 72px;
+    border-radius: 8px;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.content p {
+    color: #F2F2F2;
+}
