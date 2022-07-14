@@ -11,17 +11,26 @@ export function Task() {
 
     const [newTask, setNewTask] = useState('');
 
+    const [newCreatedTask, setNewCreatedTask] = useState(0)
+
+
 
     function handleCreateNewTask() {
         event.preventDefault();
         setTasks([...tasks, newTask])
         setNewTask('');
+        addTaskToSumary(tasks.length)
     }
 
     function handleNewTaskChange() {
         event.target.setCustomValidity('')
         setNewTask(event.target.value)
 
+    }
+
+    function addTaskToSumary(taskLength) {
+        const createdTask =  taskLength;
+        setNewCreatedTask(createdTask + 1)
     }
 
     function deleteTask(taskToDelete) {
@@ -56,7 +65,7 @@ export function Task() {
 
             <div className={styles.createdTask}>
                 <div className={styles.summary}>
-                    <strong className={styles.created}>Tarefas criadas 0</strong>
+                    <strong className={styles.created}>Tarefas criadas {newCreatedTask}</strong>
                     <strong className={styles.finished}>Concluídas 0</strong>
                 </div>
 

@@ -5,7 +5,7 @@ export function Content({task, onDeleteTask}) {
     
     function handleDeleteTask() {
         onDeleteTask();
-        console.log(event.target.valu, 'delete task')
+        console.log(event.target.value, 'delete task')
     }
 
     return (
