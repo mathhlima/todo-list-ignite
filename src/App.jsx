@@ -11,7 +11,6 @@ function App() {
       <div className={styles.wrapper}>
         <Header />
         <Task />
-        <CreatedTasks />
       </div>
     
   )

@@ -1,11 +1,9 @@
 .task {
-    display: flex;
-    justify-content: center;
+   
     
 }
 .task .form{
    display: flex;
-   width: 50%;
    justify-content: center;
    
 }
@@ -22,4 +20,36 @@
     background: #1E6F9F;
 }
 
+.newTask {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.createdTask {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.createdTask .summary {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.createdTask .content {
+    background: #333333;
+    display: flex;
+    justify-content: space-between;
+    height: 72px;
+    border-radius: 8px;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.createdTask .summary .created {
+    color: #4EA8DE;
+} 
+.createdTask .summary .finished {
+    color: #8284FA;
+} 
 
