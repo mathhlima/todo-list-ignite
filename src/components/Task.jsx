@@ -6,7 +6,7 @@ import { Trash } from 'phosphor-react'
 export function Task() {
 
     const [tasks, setTasks] = useState([
-        'fumar muita maconha'
+        'teste'
     ])
 
     const [newTask, setNewTask] = useState('');
